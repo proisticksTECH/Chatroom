@@ -8,22 +8,22 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #1a1a2e;
-    color: #eee;
+    background: #EBF61E;
+    color: #1e293b;
     height: 100vh;
     display: flex;
     flex-direction: column;
   }
   header {
-    background: #16213e;
+    background: #d4e018;
     padding: 16px 24px;
-    border-bottom: 1px solid #0f3460;
+    border-bottom: 1px solid #c0cc14;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   header h1 { font-size: 1.2rem; font-weight: 600; }
-  #username-display { font-size: 0.85rem; color: #a0a0c0; }
+  #username-display { font-size: 0.85rem; color: #4a5500; }
   #messages {
     flex: 1;
     overflow-y: auto;
@@ -46,23 +46,26 @@
   }
   .msg.self {
     align-self: flex-end;
-    background: #0f3460;
+    background: #fff;
     border-bottom-right-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
   .msg.other {
     align-self: flex-start;
-    background: #16213e;
+    background: #d4e018;
+    color: #1e293b;
     border-bottom-left-radius: 4px;
   }
   .msg .meta {
     font-size: 0.75rem;
-    color: #7a7a9a;
+    color: #64748b;
     margin-bottom: 4px;
   }
+  .msg.other .meta { color: #5a6500; }
   .msg.system {
     align-self: center;
     background: transparent;
-    color: #666;
+    color: #4a5500;
     font-size: 0.8rem;
     padding: 4px;
   }
@@ -70,35 +73,35 @@
     display: flex;
     gap: 8px;
     padding: 12px 16px;
-    background: #16213e;
-    border-top: 1px solid #0f3460;
+    background: #d4e018;
+    border-top: 1px solid #c0cc14;
   }
   #msg-input {
     flex: 1;
     padding: 12px 16px;
-    border: 1px solid #0f3460;
+    border: 1px solid #c0cc14;
     border-radius: 8px;
-    background: #1a1a2e;
-    color: #eee;
+    background: #fff;
+    color: #1e293b;
     font-size: 0.95rem;
     outline: none;
   }
-  #msg-input:focus { border-color: #e94560; }
+  #msg-input:focus { border-color: #E5902E; }
   #send-btn {
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
-    background: #e94560;
+    background: #E5902E;
     color: #fff;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.15s;
   }
-  #send-btn:hover { background: #ff6b6b; }
+  #send-btn:hover { background: #f0a040; }
   #join-overlay {
     position: fixed;
     inset: 0;
-    background: #1a1a2e;
+    background: #EBF61E;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,37 +109,38 @@
   }
   #join-overlay.hidden { display: none; }
   .join-card {
-    background: #16213e;
+    background: #fff;
     padding: 40px;
     border-radius: 16px;
     text-align: center;
     width: 320px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
   }
-  .join-card h2 { margin-bottom: 20px; font-size: 1.4rem; }
+  .join-card h2 { margin-bottom: 20px; font-size: 1.4rem; color: #1e293b; }
   .join-card input {
     width: 100%;
     padding: 12px 16px;
     margin-bottom: 16px;
-    border: 1px solid #0f3460;
+    border: 1px solid #c0cc14;
     border-radius: 8px;
-    background: #1a1a2e;
-    color: #eee;
+    background: #f8fafc;
+    color: #1e293b;
     font-size: 1rem;
     outline: none;
   }
-  .join-card input:focus { border-color: #e94560; }
+  .join-card input:focus { border-color: #E5902E; }
   .join-card button {
     width: 100%;
     padding: 12px;
     border: none;
     border-radius: 8px;
-    background: #e94560;
+    background: #E5902E;
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
   }
-  .join-card button:hover { background: #ff6b6b; }
+  .join-card button:hover { background: #f0a040; }
 </style>
 </head>
 <body>
